@@ -1,0 +1,16 @@
+// 1. MES VARIABLES FIGMA
+// C'est ici que tu vas écraser les couleurs par défaut de Bootstrap
+$primary: #ff5733; // Mets ici la couleur principale de ton projet
+$border-radius: 12px; // Arrondit un peu plus les boutons par défaut
+
+// 2. IMPORTATION DE BOOTSTRAP
+// On va chercher le moteur dans le dossier node_modules
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+// 3. MON CSS SUR-MESURE
+// Tout ce que tu vas coder à la main ira ici (ou dans d'autres fichiers que tu importeras)
+body {
+  background-color: #f8f9fa;
+
+}
