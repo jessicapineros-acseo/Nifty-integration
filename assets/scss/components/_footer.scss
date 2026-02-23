@@ -1,0 +1,53 @@
+.footer {
+  background-color: $primary;
+  color: $white;
+
+  .footer-text {
+    font-size: .875rem;
+  }
+
+  .footer-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.125rem;
+    }
+
+  }
+
+  .footer-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: .75rem;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      letter-spacing: 0.02rem;
+      font-size: .875rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .navbar-brand {
+
+    img {
+        max-width: 100px;
+
+        @include media-breakpoint-up(lg) {
+            max-width: none;
+        }
+    }
+  }
+}

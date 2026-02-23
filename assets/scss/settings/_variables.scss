@@ -1,0 +1,34 @@
+// Typo
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-size-base: 1rem;
+
+// Colors
+$primary:   #823ec9; 
+$secondary: #ffb300; 
+$dark:      #381b58; 
+$light:     #f7f7f7; 
+$white:     #ffff;
+$gray:      #C7C7C7;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1196px,  
+  xxl: 1196px,
+  xxxl: 1400px
+);
+
+$body-bg:    $white;
+$body-color: $dark;
+$border-radius: 6px; 

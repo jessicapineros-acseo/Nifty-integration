@@ -1,0 +1,92 @@
+.btn {
+  --bs-btn-padding-y: 12px;
+  --bs-btn-padding-x: 20px;
+  --bs-btn-font-size: $font-size-base;
+  --bs-btn-font-weight: 600;
+  --bs-btn-line-height: 1.5;
+  min-width: 120px;
+  letter-spacing: 0.02em;
+  transition: all .3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba($dark, .25);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 .25rem rgba($primary, .3);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $light !important; 
+    border-color: $light !important;     
+    color: $dark !important;           
+    box-shadow: none !important;         
+    cursor: not-allowed;                 
+  }
+}
+
+.btn-primary {
+  --bs-btn-bg: #{$secondary};
+  --bs-btn-border-color: #{$secondary};
+  --bs-btn-color: #{$white};
+  // hover
+  --bs-btn-hover-bg: #{$primary}; 
+  --bs-btn-hover-border-color: #{$primary};
+  --bs-btn-hover-color: #{$white};
+  // Active
+  --bs-btn-active-bg: #{$primary};
+  --bs-btn-active-border-color: #{$primary};
+  --bs-btn-active-color: #{$white};
+}
+
+.btn-secondary {
+  --bs-btn-bg: #{$primary};
+  --bs-btn-border-color: #{$primary};
+  --bs-btn-color: #{$white};
+  //hover
+  --bs-btn-hover-bg: #{$primary};
+  --bs-btn-hover-color: #{$white};
+  --bs-btn-hover-border-color: #{$primary};
+  // Active 
+  --bs-btn-active-bg: #{$primary};
+  --bs-btn-active-border-color: #{$primary};
+  --bs-btn-active-color: #{$white};
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #{$primary};
+  --bs-btn-border-color: #{$primary};
+  --bs-btn-bg: transparent;
+  // Hover
+  --bs-btn-hover-color: #{$primary};
+  --bs-btn-hover-bg: #{$light}; 
+  --bs-btn-hover-border-color: #{$primary};
+  // Active
+  --bs-btn-active-color: #{$primary};
+  --bs-btn-active-bg: #{$light};
+  --bs-btn-active-border-color: #{$primary};
+}
+
+.btn-ghost {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-color: #{$dark};
+  // Hover
+  --bs-btn-hover-bg: #{$light}; 
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-color: #{$dark};
+  // Active
+  --bs-btn-active-bg: #{$light}; 
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-active-color: #{$dark};
+
+  &:hover {
+    box-shadow: none;
+  }
+}

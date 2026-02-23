@@ -1,0 +1,80 @@
+
+.navbar {
+  --bs-navbar-color: #{$dark};
+  --bs-navbar-hover-color: #{$primary};
+  --bs-navbar-active-color: #{$dark};
+  --bs-navbar-toggler-icon-bg: url('../../assets/images/menu-burger-icon.svg');
+  background-color: $white; 
+  padding-top: 1.5rem;      
+  border-bottom: 1px solid $gray;
+  
+  .navbar-nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: .75rem;
+  }
+
+  .nav-link {
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color .3s ease; 
+    border-radius: $border-radius;
+
+    &.active {
+      background-color: $light; 
+      color: $dark;
+      width: fit-content;
+
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .navbar-brand {
+
+    img {
+        max-width: 100px;
+
+        @include media-breakpoint-up(lg) {
+            max-width: none;
+        }
+    }
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-font-size: .875rem;
+    --bs-dropdown-border-color: #{$primary};
+
+    .dropdown-item {
+        font-weight: 500;
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid $primary;
+    }
+  }
+
+  .btn-account {
+    svg {
+        transition: transform .3s ease; 
+    }
+
+
+    &.show {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+  }
+
+}
