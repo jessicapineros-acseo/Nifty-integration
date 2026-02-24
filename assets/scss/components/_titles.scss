@@ -16,6 +16,13 @@ h1,
         margin-right: .2rem;
     }
 }
+.title-decoration {
+    &::before {
+        content: "/ ";
+        color: $secondary;
+        margin-right: .2rem;
+    }
+}
 
 h2,
 .h2 {

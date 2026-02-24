@@ -46,3 +46,36 @@ body {
     max-height: 110px;
   }
 }
+
+.text-16 {
+  font-size: 1rem;
+}
+
+.list-arrows {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.2474 12.8475C21.7162 12.3787 21.7162 11.6175 21.2474 11.1487L15.2474 5.14874C14.7787 4.67999 14.0174 4.67999 13.5487 5.14874C13.0799 5.61749 13.0799 6.37874 13.5487 6.84749L17.5012 10.8H3.5999C2.93615 10.8 2.3999 11.3362 2.3999 12C2.3999 12.6637 2.93615 13.2 3.5999 13.2H17.5012L13.5487 17.1525C13.0799 17.6212 13.0799 18.3825 13.5487 18.8512C14.0174 19.32 14.7787 19.32 15.2474 18.8512L21.2474 12.8512V12.8475Z' fill='%23381B58'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
