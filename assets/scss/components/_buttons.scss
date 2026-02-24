@@ -5,7 +5,6 @@
   --bs-btn-font-weight: 600;
   --bs-btn-line-height: 1.5;
   min-width: 120px;
-  letter-spacing: 0.02em;
   transition: all .3s ease;
   display: inline-flex;
   justify-content: center;
@@ -24,10 +23,10 @@
   &:disabled,
   &.disabled {
     background-color: $light !important; 
-    border-color: $light !important;     
-    color: $dark !important;           
-    box-shadow: none !important;         
-    cursor: not-allowed;                 
+    border-color: $light !important;
+    color: $dark !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
   }
 }
 
@@ -62,7 +61,7 @@
 .btn-outline-primary {
   --bs-btn-color: #{$primary};
   --bs-btn-border-color: #{$primary};
-  --bs-btn-bg: transparent;
+  --bs-btn-bg: #{$white};
   // Hover
   --bs-btn-hover-color: #{$primary};
   --bs-btn-hover-bg: #{$light}; 

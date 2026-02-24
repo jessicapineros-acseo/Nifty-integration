@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Nifty</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
                         <div class="offcanvas-body gap-2 gap-lg-2 gap-xl-4">
                             <ul class="navbar-nav mb-4 mb-lg-0 gap-3 ">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">Accueil</a>
+                                    <a class="nav-link" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="news.html">Actualités</a>
@@ -42,7 +42,7 @@
                                     <a class="nav-link" href="offers.html">Les offres</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="register.html">Inscription</a>
+                                    <a class="nav-link active" href="register.html">Inscription</a>
                                 </li>
                             </ul>
 
@@ -51,7 +51,9 @@
                                 <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
                             </div>
 
-                            <div class="dropdown d-flex mt-4 mt-lg-0">
+                            <!-- à décommenter lors de la dynamisation -->
+
+                            <!-- <div class="dropdown d-flex mt-4 mt-lg-0">
                                 <button class="btn btn-outline-primary btn-account" type="button" id="menuMonCompte" data-bs-toggle="dropdown" aria-expanded="false">
                                     Mon compte
                                     <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +96,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -102,23 +104,176 @@
         </div>
     </header>
 
-    <div class="container my-5 text-center">
-        <h1>Homepage todo</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sit, quisquam nam placeat quibusdam voluptas, neque dolorem architecto doloribus consequuntur nobis laboriosam dolore suscipit odit aliquid asperiores rerum quasi! Hic.</p>
-        
-        <button class="btn btn-primary">Bouton Or</button>
-        <button class="btn btn-primary">Bouton Or
-            <svg aria-hidden="true" width="24" height="24" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1525 21.2475C11.6213 21.7163 12.3825 21.7163 12.8513 21.2475L18.8513 15.2475C19.32 14.7788 19.32 14.0175 18.8513 13.5488C18.3825 13.08 17.6213 13.08 17.1525 13.5488L13.2 17.5013V3.60002C13.2 2.93627 12.6638 2.40002 12 2.40002C11.3363 2.40002 10.8 2.93627 10.8 3.60002V17.5013L6.8475 13.5488C6.37875 13.08 5.6175 13.08 5.14875 13.5488C4.68 14.0175 4.68 14.7788 5.14875 15.2475L11.1487 21.2475H11.1525Z" fill="currentColor"/>
-            </svg>
+    <main class="pt-5">
+        <div class="container">
+            <h1 class="main-title mb-4">
+                <span class="text-primary">Connectez-vous</span> pour profiter des offres
+            </h1>
 
-        </button>
-        <button class="btn btn-secondary">Bouton Violet</button>
-        <button class="btn btn-primary disabled">Bouton Gris</button>
+            <div class="row g-4"> 
+                <div class="col-lg-7 col-xl-8">
+                    <div class="bg-light p-4 rounded-2 h-100">
+                        <h2 class="mb-3">Pas encore inscrit sur Nifty ? Inscrivez-vous dès maintenant</h2>
+                        <p class="h4 mb-3">Avant d'accéder au formulaire d'inscription, munissez-vous :</p>
+                        
+                        <ul class="mb-4">
+                            <li>De votre n° RCS et APE,</li>
+                            <li>D'un extrait de K-BIS (de moins de 3 mois)</li>
+                            <li>De l'IBAN-BIC de votre pharmacie</li>
+                            <li>Puis indiquez ci-dessous votre code Finess</li>
+                        </ul>
 
-        <button class="btn btn-outline-primary">Contour Violet</button>
-        <button class="btn btn-ghost">Bouton ghost</button>
-    </div>
+                        <p class="text-danger fw-medium mb-4">
+                            Attention, l'inscription n'est réalisable qu'une seule fois, toute connexion démarrée devra être finalisée. Assurez-vous de disposer de tous les éléments demandés ci-dessus avant de vous connecter !
+                        </p>
+
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="codeFiness" class="form-label text-body-secondary">Code Finess</label>
+                                <input type="text" class="form-control bg-white" id="codeFiness" placeholder="Entrez votre code finess" required>
+                            </div>
+                            <p class="mb-4 small">
+                                Le code finess est votre numéro d'identification, composé de 9 chiffres. Selon les établissements et/ou LGO, le code finess est également appelé 'code facturation'
+                            </p>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-xl-4">
+                    <div class="p-4 rounded-2 text-center h-100 d-flex flex-column justify-content-center align-items-center bg-lilac">
+                        <div class="bg-primary text-white rounded-circle icon-box-48 mb-4">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.0001 7.2C9.0001 5.5425 10.3426 4.2 12.0001 4.2C13.6576 4.2 15.0001 5.5425 15.0001 7.2C15.0001 8.8575 13.6576 10.2 12.0001 10.2C10.3426 10.2 9.0001 8.8575 9.0001 7.2ZM16.8001 7.2C16.8001 4.54875 14.6513 2.4 12.0001 2.4C9.34885 2.4 7.2001 4.54875 7.2001 7.2C7.2001 9.85125 9.34885 12 12.0001 12C14.6513 12 16.8001 9.85125 16.8001 7.2ZM5.4001 20.4C5.4001 17.7488 7.54885 15.6 10.2001 15.6H13.8001C16.4513 15.6 18.6001 17.7488 18.6001 20.4V20.7C18.6001 21.1988 19.0013 21.6 19.5001 21.6C19.9988 21.6 20.4001 21.1988 20.4001 20.7V20.4C20.4001 16.755 17.4451 13.8 13.8001 13.8H10.2001C6.5551 13.8 3.6001 16.755 3.6001 20.4V20.7C3.6001 21.1988 4.00135 21.6 4.5001 21.6C4.99885 21.6 5.4001 21.1988 5.4001 20.7V20.4Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+
+                        <h2 class="mb-3">Déjà inscrit ?</h2>
+                        <p class="mb-4 text-dark small">
+                            Le code finess est votre numéro d'identification, composé de 9 chiffres. Selon les établissements et/ou LGO, le code finess est également appelé 'code facturation'
+                        </p>
+
+                        <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider-dots my-5"></div>
+
+        <section class="mb-5">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-start mb-4">
+                    <div class="mb-3 mb-md-0">
+                        <h2 class="main-title mb-2">
+                            Nifty et votre <span class="text-primary">logiciel de caisse</span>
+                        </h2>
+                        <p class="mb-0">Découvrez en vidéo comment intégrer Nifty à votre logiciel de caisse et gérer les coupons au quotidien.</p>
+                    </div>
+
+                    <div>
+                        <a href="/documentation.html" class="btn btn-outline-primary fw-bold d-inline-flex align-items-center">
+                            <svg aria-hidden="true" width="14" height="14" class="me-2" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                            </svg>
+                            Lire la documentation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-3 g-md-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-winpharma.png" alt="Winpharma" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-id.png" alt="id" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-smartrx.png" alt="SmartRx" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-leo.png" alt="LEO" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-pharmaland.png" alt="Pharmaland" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-pharmony.png" alt="Pharmony" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-visiopharm.png" alt="Visio Pharm" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-pharmavitale.png" alt="Pharma Vitale" class="img-fluid img-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="bg-light rounded-3 d-flex justify-content-center align-items-center p-3 box-logo">
+                            <img src="assets/images/partners/logo-infosoft.png" alt="Infosof" class="img-fluid img-logo">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="main-title mb-3">
+                    <span class="text-dark">Des milliers de pharmacies sont</span> 
+                    <span class="text-primary">déjà utilisatrices</span>
+                </h2>
+
+                <div class="row g-4 g-lg-5">
+                    <div class="col-md-6">
+                        <div>
+                            <p>
+                                Les promotions attirent le regard de mes patients et les incitent à l'achat. J'ai pu voir une augmentation de mon panier moyen depuis que j'appose les supports de communication avec les réductions immédiates Nifty. Le plus pratique, c'est que pour me faire rembourser tout se fait automatiquement et rapidement !
+                            </p>
+                            <p class="fw-semibold mt-4">
+                                - DV, pharmacie à St Victoret
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div>
+                            <p>
+                                Nifty me facilite la gestion des offres promotionnelles des marques car les remboursements sont automatiques. La réduction et le QR code attirent l'œil des patients et génèrent des ventes.
+                            </p>
+                            <p class="fw-semibold mt-4">
+                                - RG, pharmacie à Marvejols
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
         <div class="container">

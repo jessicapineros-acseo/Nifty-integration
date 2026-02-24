@@ -62,6 +62,14 @@
     .dropdown-divider {
         border-top: 1px solid $primary;
     }
+
+    .item-sign-out {
+      color: $red;
+
+      &:active {
+        color: $white;
+      }
+    }
   }
 
   .btn-account {

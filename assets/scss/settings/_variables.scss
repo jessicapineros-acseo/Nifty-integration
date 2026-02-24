@@ -1,14 +1,17 @@
 // Typo
 $font-family-sans-serif: 'Poppins', sans-serif;
-$font-size-base: 1rem;
+$font-size-base: 0.875rem;
 
 // Colors
-$primary:   #823ec9; 
-$secondary: #ffb300; 
-$dark:      #381b58; 
-$light:     #f7f7f7; 
+$primary:   #823ec9;
+$secondary: #ffb300;
+$dark:      #381b58;
+$light:     #f7f7f7;
 $white:     #ffff;
 $gray:      #C7C7C7;
+$red:       #EB001B;
+$lilac:     #CDBEFF;
+$danger:    #FF3A3A;
 
 $grid-breakpoints: (
   xs: 0,
@@ -31,4 +34,7 @@ $container-max-widths: (
 
 $body-bg:    $white;
 $body-color: $dark;
-$border-radius: 6px; 
+$border-radius: 6px;
+$input-padding-y: 12.5px;
+$input-padding-x: 16px;
+$input-border-color: $primary;

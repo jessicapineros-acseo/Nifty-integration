@@ -1,6 +1,6 @@
 body {
   background-color: $white;
-
+  letter-spacing: .02rem;
 }
 
 .icon {
@@ -9,4 +9,40 @@ body {
   display: inline-block;
   vertical-align: middle;
   fill: currentColor;
+}
+
+.bg-lilac {
+  background-color: $lilac;
+}
+
+.icon-box-48 {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-dots {
+  height: 6px;
+  width: 100%;
+  background-image: radial-gradient(circle, #D8D8D8 3px, transparent 4px);
+  background-size: 25px 10px;
+  background-position: center;
+}
+
+.box-logo {
+  height: 100px;
+
+  @include media-breakpoint-up(lg) {
+    height: 155px;
+  }
+}
+
+.img-logo {
+  max-height: 70px;
+
+  @include media-breakpoint-up(lg) {
+    max-height: 110px;
+  }
 }

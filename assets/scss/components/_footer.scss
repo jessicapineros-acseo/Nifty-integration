@@ -4,13 +4,17 @@
 
   .footer-text {
     font-size: .875rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .footer-title {
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    letter-spacing: 0.02rem;
+    color: $white;
 
     @include media-breakpoint-up(lg) {
         font-size: 1.125rem;
@@ -30,12 +34,12 @@
     a {
       color: $white;
       text-decoration: none;
-      transition: color 0.3s ease;
-      letter-spacing: 0.02rem;
+      transition: color .3s ease;
       font-size: .875rem;
 
       @include media-breakpoint-up(lg) {
         font-size: 1rem;
+        font-weight: 600;
       }
     }
   }
