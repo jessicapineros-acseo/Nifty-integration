@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Nifty</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -30,13 +30,13 @@
                         <div class="offcanvas-body gap-2 gap-lg-2 gap-xl-4">
                             <ul class="navbar-nav mb-4 mb-lg-0 gap-3 ">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">Accueil</a>
+                                    <a class="nav-link" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="offers.html">Les offres</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="register.html">Inscription</a>
+                                    <a class="nav-link active" href="register.html">Inscription</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="documentation.html">Documentation</a>
@@ -45,12 +45,15 @@
                                     <a class="nav-link" href="news.html">Actualités</a>
                                 </li>
                             </ul>
+
                             <!-- Add condition -->
                             <div class="d-flex">
                                 <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
                             </div>
 
-                            <div class="dropdown d-flex mt-4 mt-lg-0">
+                            <!-- à décommenter lors de la dynamisation -->
+
+                            <!-- <div class="dropdown d-flex mt-4 mt-lg-0">
                                 <button class="btn btn-outline-primary btn-account" type="button" id="menuMonCompte" data-bs-toggle="dropdown" aria-expanded="false">
                                     Mon compte
                                     <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +96,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -101,23 +104,134 @@
         </div>
     </header>
 
-    <div class="container my-5 text-center" style="min-height: 280px;">
-        <h1>Homepage todo</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sit, quisquam nam placeat quibusdam voluptas, neque dolorem architecto doloribus consequuntur nobis laboriosam dolore suscipit odit aliquid asperiores rerum quasi! Hic.</p>
-        
-        <button class="btn btn-primary">Bouton Or</button>
-        <button class="btn btn-primary">Bouton Or
-            <svg aria-hidden="true" width="24" height="24" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1525 21.2475C11.6213 21.7163 12.3825 21.7163 12.8513 21.2475L18.8513 15.2475C19.32 14.7788 19.32 14.0175 18.8513 13.5488C18.3825 13.08 17.6213 13.08 17.1525 13.5488L13.2 17.5013V3.60002C13.2 2.93627 12.6638 2.40002 12 2.40002C11.3363 2.40002 10.8 2.93627 10.8 3.60002V17.5013L6.8475 13.5488C6.37875 13.08 5.6175 13.08 5.14875 13.5488C4.68 14.0175 4.68 14.7788 5.14875 15.2475L11.1487 21.2475H11.1525Z" fill="currentColor"/>
-            </svg>
+    <main class="py-5">
+        <div class="container">
+            
+            <h1 class="mb-4">
+                Bonjour <span class="text-primary">{Nom de la pharmacie}</span> 👋
+            </h1>
 
-        </button>
-        <button class="btn btn-secondary">Bouton Violet</button>
-        <button class="btn btn-primary disabled">Bouton Gris</button>
+            <div class="alert-top mb-4">
+                <svg aria-hidden="true" class="text-primary flex-shrink-0" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.9999 4.8C25.1024 4.8 26.1149 5.4075 26.6399 6.375L42.8399 36.375C43.3424 37.305 43.3199 38.43 42.7799 39.3375C42.2399 40.245 41.2574 40.8 40.1999 40.8H7.79989C6.74239 40.8 5.75989 40.245 5.21989 39.3375C4.67989 38.43 4.65739 37.305 5.15989 36.375L21.3599 6.375C21.8849 5.4075 22.8974 4.8 23.9999 4.8ZM23.9999 31.2C22.6724 31.2 21.5999 32.2725 21.5999 33.6C21.5999 34.9275 22.6724 36 23.9999 36C25.3274 36 26.3999 34.9275 26.3999 33.6C26.3999 32.2725 25.3274 31.2 23.9999 31.2ZM23.9999 16.8C22.6349 16.8 21.5474 17.9625 21.6449 19.3275L22.1999 27.1275C22.2674 28.065 23.0549 28.8 23.9924 28.8C24.9374 28.8 25.7174 28.0725 25.7849 27.1275L26.3399 19.3275C26.4374 17.9625 25.3574 16.8 23.9849 16.8H23.9999Z" fill="currentColor"/>
+                </svg>
 
-        <button class="btn btn-outline-primary">Contour Violet</button>
-        <button class="btn btn-ghost">Bouton ghost</button>
-    </div>
+                <div>
+                    <p class="text-primary fw-semibold mb-1">Ce n'est pas votre pharmacie ?</p>
+                    <p class="mb-0">
+                        Contactez nous par email à distribution@highco-data.fr ou par téléphone au 04 88 71 36 00 du lundi au vendredi de 9H à 12H et de 14H à 17H<br>
+                        Par mesure de sécurité, toutes données manquante et/ou absente pourra entrainer le blocage temporaire de votre inscription.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="main-title mb-4">J'inscris ma pharmacie</h2>
+
+            <p class="mb-4">
+                <span class="fw-bold">Finalisez l'inscription de votre pharmacie</span> chez HighCo en complétant le formulaire ci-dessous pour recevoir automatiquement le remboursement des remises accordées à vos patients sous 7 jours par virement.
+            </p>
+
+            <form action="#" method="POST">
+
+                <div class="d-lg-flex justify-content-between align-items-end mb-3">
+                    <h3 class="h4">Coordonnées de la pharmacie</h3>
+                    <span class="">*Champs obligatoires</span>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Adresse</label>
+                        <input type="text" class="form-control" id="address" placeholder="Entrez l'adresse de votre pharmacie">
+                        <div class="form-text">Saisissez l'adresse de votre pharmacie en majuscule et sans caractères spéciaux. Les ' peuvent être remplacé par un espace</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="zip-code" class="form-label">Code postal</label>
+                        <input type="text" class="form-control" id="zip-code" placeholder="Entrez votre code postal">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="laboratory" class="form-label">Laboratoire</label>
+                        <input type="text" class="form-control" id="laboratory" placeholder="Entrez le nom de votre laboratoire">
+                        <div class="form-text">Saisissez l'adresse de votre pharmacie en majuscule et sans caractères spéciaux. Les ' peuvent être remplacé par un espace</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Numéro de téléphone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Entrez votre numéro de téléphone">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Entrez votre adresse email">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cip-code" class="form-label">Code CIP</label>
+                        <input type="text" class="form-control" id="cip-code" placeholder="Entrez votre numéro de téléphone">
+                        <div class="form-text">Merci de vérifier ou compléter votre code CIP. Le code CIP point de vente est constitué de 7 chiffres, dans une tranche comprise entre 2000000 et 2999999</div>
+                    </div>
+                </div>
+
+                <h3 class="h4 mb-4">Informations complémentaires</h3>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                        <label for="rcs" class="form-label">N° RCS</label>
+                        <input type="text" class="form-control" id="rcs" placeholder="Entrez votre numéro RCS">
+                        <div class="form-text">Renseignez les 9 chiffres de votre RCS (ou siren)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="ape" class="form-label">N° APE</label>
+                        <input type="text" class="form-control" id="ape" placeholder="Entrez votre numéro APE">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="lastname" class="form-label">Nom du titulaire</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Entrez le nom du titulaire">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Prénom du titulaire</label>
+                        <input type="text" class="form-control" id="name" placeholder="Entrez le prénom du titulaire">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="function" class="form-label small text-muted">Fonction</label>
+                        <input type="text" class="form-control" id="function" placeholder="Entrez votre fonction">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="iban" class="form-label">IBAN</label>
+                        <input type="text" class="form-control" id="iban" placeholder="Entrez votre IBAN">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="bic" class="form-label">BIC</label>
+                        <input type="text" class="form-control" id="bic" placeholder="Entrez votre BIC">
+                    </div>
+                </div>
+
+                <h3 class="h4 mb-3">Je transmet mon K-BIS ou un extrait de sirene</h3>
+                
+                <div class="mb-4">
+                    <input type="file" id="documentUpload" class="d-none" accept=".jpg,.png,.gif,.pdf">
+                    <label for="documentUpload" class="btn btn-outline-primary mb-2">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.2001 3.60002C13.2001 2.93627 12.6638 2.40002 12.0001 2.40002C11.3363 2.40002 10.8001 2.93627 10.8001 3.60002V11.5013L9.2476 9.94877C8.77885 9.48002 8.0176 9.48002 7.54885 9.94877C7.0801 10.4175 7.0801 11.1788 7.54885 11.6475L11.1488 15.2475C11.6176 15.7163 12.3788 15.7163 12.8476 15.2475L16.4476 11.6475C16.9163 11.1788 16.9163 10.4175 16.4476 9.94877C15.9788 9.48002 15.2176 9.48002 14.7488 9.94877L13.2001 11.5013V3.60002ZM6.0001 14.4C4.67635 14.4 3.6001 15.4763 3.6001 16.8V18C3.6001 19.3238 4.67635 20.4 6.0001 20.4H18.0001C19.3238 20.4 20.4001 19.3238 20.4001 18V16.8C20.4001 15.4763 19.3238 14.4 18.0001 14.4H16.2413L14.1188 16.5225C12.9488 17.6925 11.0476 17.6925 9.8776 16.5225L7.75885 14.4H6.0001ZM17.4001 16.5C17.8988 16.5 18.3001 16.9013 18.3001 17.4C18.3001 17.8988 17.8988 18.3 17.4001 18.3C16.9013 18.3 16.5001 17.8988 16.5001 17.4C16.5001 16.9013 16.9013 16.5 17.4001 16.5Z" fill="currentColor"/>
+                        </svg>
+                        Télécharger mon document
+                    </label>
+                    <div class="form-text">La taille maximale de la pièce jointe ne doit pas dépasser 3MG et seuls les formats JPG, PNG, GIF et PDF sont acceptés</div>
+                </div>
+
+                <div class="form-check mb-5">
+                    <input class="form-check-input" type="checkbox" id="cgu">
+                    <label class="form-check-label" for="cgu">
+                        J'ai lu et j'accepte les conditions générales de service*
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-secondary">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
     <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
         <div class="container">

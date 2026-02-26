@@ -2515,31 +2515,31 @@ textarea.form-control-lg {
 .form-check {
   display: block;
   min-height: 1.3125rem;
-  padding-left: 1.5em;
+  padding-left: 2em;
   margin-bottom: 0.125rem;
 }
 .form-check .form-check-input {
   float: left;
-  margin-left: -1.5em;
+  margin-left: -2em;
 }
 
 .form-check-reverse {
-  padding-right: 1.5em;
+  padding-right: 2em;
   padding-left: 0;
   text-align: right;
 }
 .form-check-reverse .form-check-input {
   float: right;
-  margin-right: -1.5em;
+  margin-right: -2em;
   margin-left: 0;
 }
 
 .form-check-input {
   --bs-form-check-bg: var(--bs-body-bg);
   flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0em;
   vertical-align: top;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2554,7 +2554,7 @@ textarea.form-control-lg {
           print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
-  border-radius: 0.25em;
+  border-radius: 0.43em;
 }
 .form-check-input[type=radio] {
   border-radius: 50%;
@@ -12923,7 +12923,7 @@ textarea.form-control-lg {
 }
 body {
   background-color: white;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.02em;
 }
 
 .icon {
@@ -13000,6 +13000,25 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.alert-top {
+  background-color: rgba(215, 177, 255, 0.1);
+  border: 1px solid #823ec9;
+  border-left: 24px solid #823ec9;
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.75rem;
+}
+@media (min-width: 992px) {
+  .alert-top {
+    gap: 1.25rem;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+  }
 }
 
 .btn {
@@ -13127,13 +13146,6 @@ h4,
 
 h5,
 .h5 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #381b58;
-}
-
-h6,
-.h6 {
   font-size: 0.875rem;
   font-weight: 500;
   color: #381b58;
