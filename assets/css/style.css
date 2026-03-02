@@ -13137,6 +13137,7 @@ h1,
   font-size: 1.5rem;
   font-weight: 700;
   color: #381b58;
+  line-height: 1.2;
 }
 
 .main-title {
@@ -13160,6 +13161,7 @@ h2,
   font-size: 1.25rem;
   font-weight: 700;
   color: #381b58;
+  line-height: 1.2;
 }
 
 h3,
@@ -13167,6 +13169,7 @@ h3,
   font-size: 1.125rem;
   font-weight: 700;
   color: #381b58;
+  line-height: 1.4;
 }
 
 h4,
@@ -13174,6 +13177,7 @@ h4,
   font-size: 1rem;
   font-weight: 600;
   color: #381b58;
+  line-height: 1.4;
 }
 
 h5,
@@ -13181,6 +13185,7 @@ h5,
   font-size: 0.875rem;
   font-weight: 500;
   color: #381b58;
+  line-height: 1.4;
 }
 
 .navbar {
@@ -13390,6 +13395,76 @@ h5,
 }
 .card-offer.card-coupon .offer-btn {
   margin-top: 0;
+}
+
+.card-news {
+  height: 100%;
+  border: none;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-news:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.card-news:hover .news-link {
+  color: #823ec9;
+}
+.card-news .card-img-top {
+  height: 145px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.card-news .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem 1.3rem;
+}
+.card-news .news-title {
+  margin-bottom: 1.5rem;
+}
+.card-news .news-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.card-news .news-tags .news-tag {
+  color: #ffb300;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 0.25rem;
+}
+.card-news .news-link {
+  color: #381b58;
+  margin-top: auto;
+  text-align: right;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+}
+@media (min-width: 768px) {
+  .card-news .news-link {
+    justify-content: flex-end;
+  }
+}
+.card-news .news-link svg {
+  transition: transform 0.2s ease;
+}
+.card-news .news-link:hover {
+  color: #823ec9;
+}
+.card-news .news-link:hover svg {
+  transform: translateX(4px);
 }
 
 .tag-outline {

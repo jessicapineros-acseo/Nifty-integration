@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homme connected</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <a class="navbar-brand me-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Nifty">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Open menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+                        
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="mainMenuLabel">
+                                <img src="assets/images/logo.svg" alt="Nifty" height="30">
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body gap-2 gap-lg-2 gap-xl-4">
+                            <ul class="navbar-nav mb-4 mb-lg-0 gap-3 ">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="offers.html">Les offres</a>
+                                </li>
+                                <!-- à décommenter lors de la dynamisation -->
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="register.html">Inscription</a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="documentation.html">Documentation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">Actualités</a>
+                                </li>
+                            </ul>
+
+                            <!-- Add condition -->
+                            <!-- à décommenter lors de la dynamisation -->
+                            <!-- <div class="d-flex">
+                                <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
+                            </div> -->
+
+                            <div class="dropdown d-flex mt-4 mt-lg-0">
+                                <button class="btn btn-outline-primary btn-account" type="button" id="menuMonCompte" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Mon compte
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.1525 16.4475C11.6212 16.9163 12.3825 16.9163 12.8512 16.4475L18.8512 10.4475C19.32 9.97878 19.32 9.21753 18.8512 8.74878C18.3825 8.28003 17.6212 8.28003 17.1525 8.74878L12 13.9013L6.84749 8.75253C6.37874 8.28378 5.61749 8.28378 5.14874 8.75253C4.67999 9.22128 4.67999 9.98253 5.14874 10.4513L11.1487 16.4513L11.1525 16.4475Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                                
+                                <ul class="dropdown-menu dropdown-menu-center shadow-sm mt-3" aria-labelledby="menuMonCompte">
+                                    <li>
+                                        <a class="dropdown-item py-2" href="account.html">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.24998 4.20002C5.24998 3.23315 6.0331 2.45002 6.99998 2.45002C7.96685 2.45002 8.74997 3.23315 8.74997 4.20002C8.74997 5.1669 7.96685 5.95002 6.99998 5.95002C6.0331 5.95002 5.24998 5.1669 5.24998 4.20002ZM9.79997 4.20002C9.79997 2.65346 8.54654 1.40002 6.99998 1.40002C5.45341 1.40002 4.19998 2.65346 4.19998 4.20002C4.19998 5.74659 5.45341 7.00002 6.99998 7.00002C8.54654 7.00002 9.79997 5.74659 9.79997 4.20002ZM3.14998 11.9C3.14998 10.3535 4.40341 9.10003 5.94998 9.10003H8.04997C9.59654 9.10003 10.85 10.3535 10.85 11.9V12.075C10.85 12.366 11.084 12.6 11.375 12.6C11.6659 12.6 11.9 12.366 11.9 12.075V11.9C11.9 9.77378 10.1762 8.05002 8.04997 8.05002H5.94998C3.82373 8.05002 2.09998 9.77378 2.09998 11.9V12.075C2.09998 12.366 2.33404 12.6 2.62498 12.6C2.91591 12.6 3.14998 12.366 3.14998 12.075V11.9Z" fill="currentColor"/>
+                                            </svg>
+                                            Mes informations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-2" href="receipts.html">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.70345 5.6001C4.30501 3.57666 6.1797 2.1001 8.40001 2.1001H9.80001C10.1872 2.1001 10.5 2.41291 10.5 2.8001C10.5 3.18729 10.1872 3.5001 9.80001 3.5001H8.40001C6.96501 3.5001 5.73126 4.36416 5.19095 5.6001H8.05001C8.34095 5.6001 8.57501 5.83416 8.57501 6.1251C8.57501 6.41603 8.34095 6.6501 8.05001 6.6501H4.91751C4.90657 6.76603 4.90001 6.88197 4.90001 7.0001C4.90001 7.11822 4.90657 7.23416 4.91751 7.3501H8.05001C8.34095 7.3501 8.57501 7.58416 8.57501 7.8751C8.57501 8.16603 8.34095 8.4001 8.05001 8.4001H5.19095C5.73126 9.63603 6.96501 10.5001 8.40001 10.5001H9.80001C10.1872 10.5001 10.5 10.8129 10.5 11.2001C10.5 11.5873 10.1872 11.9001 9.80001 11.9001H8.40001C6.1797 11.9001 4.30501 10.4235 3.70345 8.4001H2.97501C2.68407 8.4001 2.45001 8.16603 2.45001 7.8751C2.45001 7.58416 2.68407 7.3501 2.97501 7.3501H3.51314C3.49782 7.12041 3.49782 6.87978 3.51314 6.6501H2.97501C2.68407 6.6501 2.45001 6.41603 2.45001 6.1251C2.45001 5.83416 2.68407 5.6001 2.97501 5.6001H3.70345Z" fill="currentColor"/>
+                                            </svg>
+                                            Mes bordereaux
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item py-2" href="#">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.6944 3.99427C11.9678 3.72083 11.9678 3.27677 11.6944 3.00333L10.2944 1.60333C10.0932 1.40208 9.79346 1.34302 9.53096 1.45239C9.26846 1.56177 9.10003 1.81771 9.10003 2.09989V2.79989H5.60002C3.28127 2.79989 1.40002 4.68114 1.40002 6.9999C1.40002 7.38708 1.71284 7.69989 2.10002 7.69989C2.48721 7.69989 2.80002 7.38708 2.80002 6.9999C2.80002 5.45333 4.05346 4.19989 5.60002 4.19989H9.10003V4.89989C9.10003 5.18208 9.27065 5.43802 9.53315 5.54739C9.79565 5.65677 10.0953 5.59552 10.2966 5.39646L11.6966 3.99646L11.6944 3.99427ZM2.30565 10.0055C2.03221 10.279 2.03221 10.723 2.30565 10.9965L3.70565 12.3965C3.9069 12.5977 4.20659 12.6568 4.46909 12.5474C4.73159 12.438 4.90002 12.1821 4.90002 11.8999V11.1999H8.40002C10.7188 11.1999 12.6 9.31865 12.6 6.9999C12.6 6.61271 12.2872 6.29989 11.9 6.29989C11.5128 6.29989 11.2 6.61271 11.2 6.9999C11.2 8.54646 9.94659 9.7999 8.40002 9.7999H4.90002V9.0999C4.90002 8.81771 4.7294 8.56177 4.4669 8.45239C4.2044 8.34302 3.90471 8.40427 3.70346 8.60333L2.30346 10.0033L2.30565 10.0055Z" fill="currentColor"/>
+                                            </svg>
+                                            Changer de pharmacie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-2 item-sign-out" href="#">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.90002 3.5001C5.28721 3.5001 5.60002 3.18729 5.60002 2.8001C5.60002 2.41291 5.28721 2.1001 4.90002 2.1001H3.50002C2.34065 2.1001 1.40002 3.04072 1.40002 4.2001V9.8001C1.40002 10.9595 2.34065 11.9001 3.50002 11.9001H4.90002C5.28721 11.9001 5.60002 11.5873 5.60002 11.2001C5.60002 10.8129 5.28721 10.5001 4.90002 10.5001H3.50002C3.11284 10.5001 2.80002 10.1873 2.80002 9.8001V4.2001C2.80002 3.81291 3.11284 3.5001 3.50002 3.5001H4.90002ZM12.3944 7.49447C12.6678 7.22104 12.6678 6.77697 12.3944 6.50353L9.5944 3.70354C9.32096 3.4301 8.8769 3.4301 8.60346 3.70354C8.33002 3.97697 8.33002 4.42104 8.60346 4.69447L10.2091 6.3001H5.60002C5.21284 6.3001 4.90002 6.61291 4.90002 7.0001C4.90002 7.38728 5.21284 7.7001 5.60002 7.7001H10.2091L8.60346 9.30572C8.33002 9.57916 8.33002 10.0232 8.60346 10.2967C8.8769 10.5701 9.32096 10.5701 9.5944 10.2967L12.3944 7.49666V7.49447Z" fill="currentColor"/>
+                                            </svg>
+                                            Déconnexion
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="p-4 py-lg-5">
+        <div class="container">
+            <h1 class="mb-4">
+                Bonjour <span class="text-primary">Grande pharmacie de la Place Blanche 👋</span>
+            </h1>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center mb-4 gap-3">
+                 <h2 class="main-title mb-0">
+                    Les dernières <span class="text-primary">offres</span>
+                </h2>
+
+                <p class="ms-lg-3 mb-0">50 offres disponibles</p>
+            </div>
+
+            <section>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-offer">
+                            
+                            <div class="card-img-wrapper">
+                                <div class="offer-badges">
+                                    <span class="badge bg-dark">Déjà imprimé</span>
+                                </div>
+                                <img src="assets/images/product-2.png" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tag-outline tag-green">En cours</span>
+                                    <span class="tag-outline tag-purple">Nom du labo</span>
+                                    <span class="tag-outline tag-purple">Nom de la catégorie</span>
+                                </div>
+                                
+                                <h3 class="offer-title">Etiaxil</h3>
+                                <p class="offer-discount">2,00€ de réduction immédiate</p>
+                                <p class="offer-date">Du 03 Janv. au 31 Mars 2026</p>
+                                
+                                <div class="dropdown d-flex mb-2">
+                                    <button class="btn btn-outline-primary dropdown-icon-anim w-100" type="button" id="kit-print" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kit à imprimer 
+                                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.1525 16.4475C11.6212 16.9163 12.3825 16.9163 12.8512 16.4475L18.8512 10.4475C19.32 9.97878 19.32 9.21753 18.8512 8.74878C18.3825 8.28003 17.6212 8.28003 17.1525 8.74878L12 13.9013L6.84749 8.75253C6.37874 8.28378 5.61749 8.28378 5.14874 8.75253C4.67999 9.22128 4.67999 9.98253 5.14874 10.4513L11.1487 16.4513L11.1525 16.4475Z" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu shadow-sm mt-3 w-100" aria-labelledby="kit-print">
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Stop rayon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Bordereau
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary offer-btn">
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49439C12.6677 7.22095 12.6677 6.77689 12.3943 6.50345L8.89428 3.00345C8.62084 2.73001 8.17678 2.73001 7.90334 3.00345C7.6299 3.27689 7.6299 3.72095 7.90334 3.99439L10.209 6.30001H2.0999C1.71271 6.30001 1.3999 6.61282 1.3999 7.00001C1.3999 7.3872 1.71271 7.70001 2.0999 7.70001H10.209L7.90334 10.0056C7.6299 10.2791 7.6299 10.7231 7.90334 10.9966C8.17678 11.27 8.62084 11.27 8.89428 10.9966L12.3943 7.49657V7.49439Z" fill="currentColor"/>
+                                    </svg>
+                                    Détails de l'offre
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-offer">
+                            
+                            <div class="card-img-wrapper">
+                                <div class="offer-badges">
+                                    <span class="badge bg-dark">Déjà imprimé</span>
+                                </div>
+                                <img src="assets/images/product-3.png" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tag-outline tag-green">En cours</span>
+                                    <span class="tag-outline tag-purple">Nom du labo</span>
+                                    <span class="tag-outline tag-purple">Nom de la catégorie</span>
+                                </div>
+                                
+                                <h3 class="offer-title">Mitosyl</h3>
+                                <p class="offer-discount">2,00€ de réduction immédiate</p>
+                                <p class="offer-date">Du 03 Janv. au 31 Mars 2026</p>
+                                
+                                <div class="dropdown d-flex mb-2">
+                                    <button class="btn btn-outline-primary dropdown-icon-anim w-100" type="button" id="kit-print" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kit à imprimer 
+                                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.1525 16.4475C11.6212 16.9163 12.3825 16.9163 12.8512 16.4475L18.8512 10.4475C19.32 9.97878 19.32 9.21753 18.8512 8.74878C18.3825 8.28003 17.6212 8.28003 17.1525 8.74878L12 13.9013L6.84749 8.75253C6.37874 8.28378 5.61749 8.28378 5.14874 8.75253C4.67999 9.22128 4.67999 9.98253 5.14874 10.4513L11.1487 16.4513L11.1525 16.4475Z" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu shadow-sm mt-3 w-100" aria-labelledby="kit-print">
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Stop rayon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Bordereau
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary offer-btn">
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49439C12.6677 7.22095 12.6677 6.77689 12.3943 6.50345L8.89428 3.00345C8.62084 2.73001 8.17678 2.73001 7.90334 3.00345C7.6299 3.27689 7.6299 3.72095 7.90334 3.99439L10.209 6.30001H2.0999C1.71271 6.30001 1.3999 6.61282 1.3999 7.00001C1.3999 7.3872 1.71271 7.70001 2.0999 7.70001H10.209L7.90334 10.0056C7.6299 10.2791 7.6299 10.7231 7.90334 10.9966C8.17678 11.27 8.62084 11.27 8.89428 10.9966L12.3943 7.49657V7.49439Z" fill="currentColor"/>
+                                    </svg>
+                                    Détails de l'offre
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-offer">
+                            
+                            <div class="card-img-wrapper">
+                                <div class="offer-badges">
+                                    <span class="badge bg-dark">Déjà imprimé</span>
+                                </div>
+                                <img src="assets/images/product-3.png" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="tag-outline tag-green">En cours</span>
+                                    <span class="tag-outline tag-purple">Nom du labo</span>
+                                    <span class="tag-outline tag-purple">Nom de la catégorie</span>
+                                </div>
+                                
+                                <h3 class="offer-title">Mitosyl</h3>
+                                <p class="offer-discount">2,00€ de réduction immédiate</p>
+                                <p class="offer-date">Du 03 Janv. au 31 Mars 2026</p>
+                                
+                                <div class="dropdown d-flex mb-2">
+                                    <button class="btn btn-outline-primary dropdown-icon-anim w-100" type="button" id="kit-print" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kit à imprimer 
+                                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.1525 16.4475C11.6212 16.9163 12.3825 16.9163 12.8512 16.4475L18.8512 10.4475C19.32 9.97878 19.32 9.21753 18.8512 8.74878C18.3825 8.28003 17.6212 8.28003 17.1525 8.74878L12 13.9013L6.84749 8.75253C6.37874 8.28378 5.61749 8.28378 5.14874 8.75253C4.67999 9.22128 4.67999 9.98253 5.14874 10.4513L11.1487 16.4513L11.1525 16.4475Z" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu shadow-sm mt-3 w-100" aria-labelledby="kit-print">
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Stop rayon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item py-2" href="#">
+                                                Bordereau
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary offer-btn">
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49439C12.6677 7.22095 12.6677 6.77689 12.3943 6.50345L8.89428 3.00345C8.62084 2.73001 8.17678 2.73001 7.90334 3.00345C7.6299 3.27689 7.6299 3.72095 7.90334 3.99439L10.209 6.30001H2.0999C1.71271 6.30001 1.3999 6.61282 1.3999 7.00001C1.3999 7.3872 1.71271 7.70001 2.0999 7.70001H10.209L7.90334 10.0056C7.6299 10.2791 7.6299 10.7231 7.90334 10.9966C8.17678 11.27 8.62084 11.27 8.89428 10.9966L12.3943 7.49657V7.49439Z" fill="currentColor"/>
+                                    </svg>
+                                    Détails de l'offre
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center justify-content-lg-end mb-4">
+                    <a href="/offers.html" class="btn btn-outline-primary">Toutes les offres</a>
+                </div>
+            </section>
+        </div>
+
+        <section class="bg-light py-4">
+            <div class="container">
+                <h2 class="h2 mb-4 title-decoration">Astuces et supports</h2>
+                <div class="row g-4 "> 
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 rounded-2 h-100 d-flex flex-column align-items-center">
+
+                            <div class="bg-primary text-white rounded-circle icon-box-48 mb-4">
+                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7838 16.8C16.0575 15.9637 16.605 15.2062 17.2238 14.5537C18.45 13.2637 19.2 11.52 19.2 9.59999C19.2 5.62499 15.975 2.39999 12 2.39999C8.02505 2.39999 4.80005 5.62499 4.80005 9.59999C4.80005 11.52 5.55005 13.2637 6.7763 14.5537C7.39505 15.2062 7.9463 15.9637 8.2163 16.8H15.78H15.7838ZM15.6 18.6H8.40005V19.2C8.40005 20.8575 9.74255 22.2 11.4 22.2H12.6C14.2575 22.2 15.6 20.8575 15.6 19.2V18.6ZM11.7 6.59999C10.2075 6.59999 9.00005 7.80749 9.00005 9.29999C9.00005 9.79874 8.5988 10.2 8.10005 10.2C7.6013 10.2 7.20005 9.79874 7.20005 9.29999C7.20005 6.81374 9.2138 4.79999 11.7 4.79999C12.1988 4.79999 12.6 5.20124 12.6 5.69999C12.6 6.19874 12.1988 6.59999 11.7 6.59999Z" fill="currentColor"/>
+                                </svg>
+
+                            </div>
+
+                            <h3 class="mb-3 text-center">Bien démarrer avec Nifty</h3>
+                            <p class="mb-3">Retrouvez ici des conseils pratiques et des ressources pour vous accompagner dans l’utilisation de Nifty au quotidien, en officine. </p>
+                            
+                            <ul class="mb-4 text-16 fw-semibold list-arrows">
+                                <li>Tutoriels pour faire passer les coupons dans votre logiciel de caisse </li>
+                                <li>Conseils pour valoriser les offres en officine</li>
+                                <li>Vidéos courtes : bonnes pratiques & conseils</li>
+                            </ul>
+
+                            <div class="text-center">
+                                <a href="#" class="btn btn-outline-primary">
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                    </svg>
+                                    Voir tous les tutoriels
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 rounded-2 h-100 d-flex flex-column align-items-center">
+                            <div class="bg-primary text-white rounded-circle icon-box-48 mb-4">
+                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.4 8.39999C8.4 6.41249 10.0125 4.79999 12 4.79999C13.9875 4.79999 15.6 6.41249 15.6 8.39999C15.6 10.0012 14.5538 11.3587 13.1063 11.8275C12.0413 12.1725 10.8 13.1512 10.8 14.7V15.6C10.8 16.2637 11.3363 16.8 12 16.8C12.6638 16.8 13.2 16.2637 13.2 15.6V14.7C13.2 14.6362 13.2225 14.5462 13.3313 14.4262C13.4438 14.3025 13.6275 14.1825 13.845 14.1112C16.2563 13.335 18 11.0737 18 8.39999C18 5.08499 15.315 2.39999 12 2.39999C8.685 2.39999 6 5.08499 6 8.39999C6 9.06374 6.53625 9.59999 7.2 9.59999C7.86375 9.59999 8.4 9.06374 8.4 8.39999ZM12 21.6C12.8288 21.6 13.5 20.9287 13.5 20.1C13.5 19.2712 12.8288 18.6 12 18.6C11.1713 18.6 10.5 19.2712 10.5 20.1C10.5 20.9287 11.1713 21.6 12 21.6Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+
+                            <h3 class="mb-3 text-center">Besoin d’aide ?</h3>
+                            <p class="mb-4">
+                                Vous avez des interrogations ? Voici des réponses aux questions les plus courantes sur l’utilisation de Nifty dans votre officine. 
+                            </p>
+                            <ul class="mb-4 text-16 fw-semibold list-arrows">
+                                <li>Qu'est-ce que HighCo Nifty et comment cela fonctionne-t-il ?</li>
+                                <li>Comment fonctionne le processus d'acceptation des coupons mobiles en officine ?</li>
+                                <li>Quels sont les avantages pour les pharmaciens ?</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-outline-primary">
+                                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                </svg>
+                                Voir la FAQ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 text-center">
+                    <h3 class="mb-3">Vous avez une autre question ?</h3>
+                    <p class="fw-medium mb-3">Envoyez-nous un email, nous vous répondons sous 48h.</p>
+                    <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="main-title mb-4">
+                    Nos dernières <span class="text-primary">actualités</span>
+                </h2>
+
+                <div class="row g-4 mb-4">
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-news">
+                            <img src="https://picsum.photos/200" class="card-img-top" alt="Image retail">
+                            <div class="card-body">
+                                <div class="news-tags">
+                                    <span class="news-tag">#Retail</span>
+                                </div>
+                                <h3 class="news-title">Retail : Quelles bonnes pratiques drive-to-store pour la reprise ?</h3>
+                                <a href="#" class="news-link stretched-link">
+                                    En savoir plus
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-news">
+                            <img src="https://picsum.photos/200" class="card-img-top" alt="Image pharmacie">
+                            <div class="card-body">
+                                <div class="news-tags">
+                                    <span class="news-tag">#Innovation</span>
+                                </div>
+                                <h3 class="news-title">Un coupon de réduction 100% digital arrive dans les groupements pharmacies et officines</h3>
+                                <a href="#" class="news-link stretched-link">
+                                    En savoir plus
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-news">
+                            <img src="https://picsum.photos/200/300" class="card-img-top" alt="Image smartphone">
+                            <div class="card-body">
+                                <div class="news-tags">
+                                    <span class="news-tag">#Mobile</span>
+                                </div>
+                                <h3 class="news-title">HighCo, le bon de réduction adapté à l'ère Covid</h3>
+                                <a href="#" class="news-link stretched-link">
+                                    En savoir plus
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-news">
+                            <img src="https://picsum.photos/200/200" class="card-img-top" alt="Image digitale">
+                            
+                            <div class="card-body">
+                                <div class="news-tags">
+                                    <span class="news-tag">#Innovation</span>
+                                    <span class="news-tag">#Marque</span>
+                                </div>
+                                
+                                <h3 class="news-title">HighCo innove dans la promotion digitale au service des marques</h3>
+                                
+                                <a href="#" class="news-link stretched-link">
+                                    En savoir plus
+                                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center justify-content-lg-end">
+                    <a href="news.html" class="btn btn-outline-primary">
+                        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3943 7.49436C12.6677 7.22092 12.6677 6.77686 12.3943 6.50342L8.89428 3.00342C8.62084 2.72998 8.17678 2.72998 7.90334 3.00342C7.6299 3.27686 7.6299 3.72092 7.90334 3.99436L10.209 6.29998H2.0999C1.71271 6.29998 1.3999 6.61279 1.3999 6.99998C1.3999 7.38717 1.71271 7.69998 2.0999 7.69998H10.209L7.90334 10.0056C7.6299 10.279 7.6299 10.7231 7.90334 10.9965C8.17678 11.27 8.62084 11.27 8.89428 10.9965L12.3943 7.49654V7.49436Z" fill="currentColor"/>
+                        </svg>
+                        Toutes nos actualités
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-lg-0">
+                    <a class="navbar-brand d-inline-block mb-3" href="index.html">
+                       <img src="assets/images/logo-white.svg" alt="Nifty">
+                    </a>
+                    <p class="footer-text pe-lg-4">
+                        HighCo Nifty, LA solution de coupons de <br> réduction immédiats sur smartphone.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 mb-2 mb-lg-0">
+                    <h5 class="footer-title">Pourquoi Nifty ?</h5>
+                    <ul class="footer-list">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Inscription</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-2 mb-lg-0">
+                    <h5 class="footer-title">Liens annexes</h5>
+                    <ul class="footer-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Nous contacter</h5>
+                    <div class="footer-text fw-semibold">
+                        <p>365 avenue Archimède <br>13799 Aix en Provence Cedex 3</p>
+                        <p><a href="mailto:contact@highco-nifty.com" class="text-white">contact@highco-nifty.com</a></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
