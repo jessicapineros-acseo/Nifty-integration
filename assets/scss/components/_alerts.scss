@@ -1,0 +1,17 @@
+.alert-top {
+  background-color:  $lilac-light; 
+  border: 1px solid $primary;
+  border-left: 24px solid $primary; 
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .625rem;
+  font-size: .75rem;
+
+  @include media-breakpoint-up(lg) {
+    gap: 1.25rem;
+    padding: 1.5rem;
+    font-size: .875rem;
+  }
+}

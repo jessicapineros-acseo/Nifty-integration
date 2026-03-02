@@ -1,0 +1,17 @@
+.tag-outline {
+    display: inline-block;
+    padding: .25rem .375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    background-color: $white;
+    color: $primary;
+
+    &.tag-green {
+        color: $green;
+    }
+    &.tag-red {
+        color: $red-100;
+    }
+}

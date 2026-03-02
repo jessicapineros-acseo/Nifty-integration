@@ -35,9 +35,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="offers.html">Les offres</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- à décommenter lors de la dynamisation -->
+                                <!-- <li class="nav-item">
                                     <a class="nav-link active" href="register.html">Inscription</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="documentation.html">Documentation</a>
                                 </li>
@@ -47,13 +48,12 @@
                             </ul>
 
                             <!-- Add condition -->
-                            <div class="d-flex">
-                                <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
-                            </div>
-
                             <!-- à décommenter lors de la dynamisation -->
+                            <!-- <div class="d-flex">
+                                <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
+                            </div> -->
 
-                            <!-- <div class="dropdown d-flex mt-4 mt-lg-0">
+                            <div class="dropdown d-flex mt-4 mt-lg-0">
                                 <button class="btn btn-outline-primary btn-account" type="button" id="menuMonCompte" data-bs-toggle="dropdown" aria-expanded="false">
                                     Mon compte
                                     <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,6 +110,50 @@
                 Profitez de X opérations<span class="text-primary"> en cours</span>
             </h1>
 
+            <!-- filters  -->
+            <div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center mb-4 gap-3">
+                <div class="d-flex gap-3 flex-fill">
+
+                    <div class="input-group input-filter-search">
+                        <input type="text" class="form-control bg-light" placeholder="Rechercher una oferta">
+                        <button class="btn btn-secondary" type="button">Rechercher</button>
+                    </div>
+
+                    <div class="d-none d-md-flex align-items-center gap-2-5">
+
+                        <div class="dropdown">
+                            <button class="btn btn-filter flex-shrink-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                    <path fill="currentColor" d="M20 7.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-4c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h4c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM10.25 24h-2.75v-21c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-1c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v21h-2.75c-0.147 0-0.29 0.043-0.412 0.123s-0.219 0.195-0.277 0.33c-0.058 0.134-0.075 0.283-0.050 0.427s0.093 0.278 0.193 0.384l4.25 4.5c0.068 0.072 0.149 0.13 0.239 0.17s0.187 0.063 0.286 0.065c0.099 0.003 0.197-0.014 0.289-0.049s0.177-0.088 0.248-0.157l0.030-0.030 4.25-4.5c0.101-0.107 0.168-0.24 0.193-0.385s0.008-0.293-0.050-0.428c-0.058-0.135-0.155-0.249-0.277-0.33s-0.266-0.123-0.413-0.123zM28 19.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-12c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h12c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM32 25.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-16c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h16c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM24 13.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-8c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h8c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707z"></path>
+                                </svg>
+                                Trier
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Plus récents</a></li>
+                                <li><a class="dropdown-item" href="#">Plus anciens</a></li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn btn-filter flex-shrink-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024">
+                                <path fill="currentColor" d="M153.601 204.802c-20.64 0-39.36 12.48-47.36 31.68s-3.52 41.12 11.2 55.68l292.16 292.32v183.518c0 13.602 5.44 26.564 15.040 36.16l102.399 102.4c14.72 14.72 36.642 19.042 55.842 11.042s31.518-26.56 31.518-47.202v-285.918l292.16-292.16c14.72-14.72 19.042-36.64 11.042-55.84s-26.56-31.68-47.202-31.68h-716.799z"></path>
+                            </svg>
+                            Filtrer (4)
+                        </button>
+                        <span class="line-text"></span>
+                        
+                        <a href="#" aria-label="sauvegarder les filtres" class="text-dark p-1 ps-0" data-bs-toggle="tooltip" data-bs-title="sauvegarder les filtres">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.0001 5.4C5.6701 5.4 5.4001 5.67 5.4001 6V18C5.4001 18.33 5.6701 18.6 6.0001 18.6H18.0001C18.3301 18.6 18.6001 18.33 18.6001 18V8.89875C18.6001 8.74125 18.5363 8.5875 18.4238 8.475L15.6001 5.6475V9C15.6001 9.66375 15.0638 10.2 14.4001 10.2H8.4001C7.73635 10.2 7.2001 9.66375 7.2001 9V5.4H6.0001ZM9.0001 5.4V8.4H13.8001V5.4H9.0001ZM3.6001 6C3.6001 4.67625 4.67635 3.6 6.0001 3.6H15.1013C15.7388 3.6 16.3501 3.85125 16.8001 4.30125L19.6988 7.2C20.1488 7.65 20.4001 8.26125 20.4001 8.89875V18C20.4001 19.3237 19.3238 20.4 18.0001 20.4H6.0001C4.67635 20.4 3.6001 19.3237 3.6001 18V6Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="ms-lg-3 mb-0">50 offres disponibles</p>
+            </div>
+
+            <!-- cards grid  -->
             <div class="row g-4">
                 
                 <div class="col-md-6 col-lg-4">
@@ -121,7 +165,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="offer-title">Imprimez les QR codes de TOUTES LES OFFRES EN COURS</h3>
-                            <p class="offer-coupon-text">et placez-les directement en caisse pour ne manquer aucune réduction !</p>
+                            <p class="offer-coupon-text">et placez-les directement en caisse pour ne manquer aucune réduction&nbsp;!</p>
                             
                             <a href="#" class="btn btn-primary offer-btn">
                                 <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,10 +332,147 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
+        <!-- Filters Mobile  -->
+        <div class="mobile-filter-bar">
+            <button class="btn btn-outline-primary flex-fill">
+                <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                    <path fill="currentColor" d="M20 7.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-4c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h4c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM10.25 24h-2.75v-21c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-1c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v21h-2.75c-0.147 0-0.29 0.043-0.412 0.123s-0.219 0.195-0.277 0.33c-0.058 0.134-0.075 0.283-0.050 0.427s0.093 0.278 0.193 0.384l4.25 4.5c0.068 0.072 0.149 0.13 0.239 0.17s0.187 0.063 0.286 0.065c0.099 0.003 0.197-0.014 0.289-0.049s0.177-0.088 0.248-0.157l0.030-0.030 4.25-4.5c0.101-0.107 0.168-0.24 0.193-0.385s0.008-0.293-0.050-0.428c-0.058-0.135-0.155-0.249-0.277-0.33s-0.266-0.123-0.413-0.123zM28 19.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-12c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h12c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM32 25.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-16c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h16c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707zM24 13.5v-1c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293h-8c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v1c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293h8c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707z"></path>
+                </svg>
+                Trier
+            </button>
+            <button class="btn btn-lilac flex-fill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024">
+                    <path fill="currentColor" d="M153.601 204.802c-20.64 0-39.36 12.48-47.36 31.68s-3.52 41.12 11.2 55.68l292.16 292.32v183.518c0 13.602 5.44 26.564 15.040 36.16l102.399 102.4c14.72 14.72 36.642 19.042 55.842 11.042s31.518-26.56 31.518-47.202v-285.918l292.16-292.16c14.72-14.72 19.042-36.64 11.042-55.84s-26.56-31.68-47.202-31.68h-716.799z"></path>
+                </svg>
+                Filtrer (4)
+            </button>
+        </div>
     </main>
+
+    <!-- Panel filters  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+
+        <div class="offcanvas-header mx-lg-auto pt-4 pb-1">
+            <h5 class="h4 offcanvas-title" id="offcanvasFiltersLabel">Filtrer</h5>
+            <button type="button" class="btn-close position-absolute end-0 me-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <form action="/search-offers" method="GET" class="d-flex flex-column flex-grow-1 overflow-hidden">
+            
+            <div class="offcanvas-body p-4 overflow-y-auto">
+                
+                <div class="accordion filter-accordion" id="accordion-filters">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-status">
+                                Statut
+                                <div class="ms-auto fw-normal d-flex align-items-center">
+                                    (1)
+                                    <span class="d-none d-lg-inline ms-2"><span class="plus">+</span> <span class="less">-</span></span>
+                                    <span class="d-lg-none ms-2">&rarr;</span>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse-status" class="accordion-collapse collapse filter-mobile-takeover" data-bs-parent="#accordion-filters">
+                            
+                            <div class="filter-mobile-header p-4 pb-0 align-items-center d-lg-none">
+                                <!-- title & back only mobile -->
+                                <button type="button" class="btn btn-link text-dark text-decoration-none p-0 fw-semibold justify-content-start" data-bs-toggle="collapse" data-bs-target="#collapse-status">
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.75293 11.1525C2.28418 11.6212 2.28418 12.3825 2.75293 12.8512L8.75293 18.8512C9.22168 19.32 9.98293 19.32 10.4517 18.8512C10.9204 18.3825 10.9204 17.6212 10.4517 17.1525L6.49918 13.2H20.4004C21.0642 13.2 21.6004 12.6637 21.6004 12C21.6004 11.3362 21.0642 10.8 20.4004 10.8H6.49918L10.4517 6.84749C10.9204 6.37874 10.9204 5.61749 10.4517 5.14874C9.98293 4.67999 9.22168 4.67999 8.75293 5.14874L2.75293 11.1487V11.1525Z" fill="currentColor"/>
+                                    </svg>
+                                    Statut
+                                </button>
+                            </div>
+
+                            <div class="filter-body-content">
+                                <div class="filter-pills-group">
+                                    <input type="checkbox" class="btn-check" id="status1" name="status" value="AVenir" checked>
+                                    <label class="btn-pill" for="status1">À venir</label>
+
+                                    <input type="checkbox" class="btn-check" id="status2" name="status" value="EnCours">
+                                    <label class="btn-pill" for="status2">En cours</label>
+
+                                    <input type="checkbox" class="btn-check" id="status3" name="status" value="Termine">
+                                    <label class="btn-pill" for="status3">Terminé</label>
+                                </div>
+                            </div>
+
+                            <!-- Mobile only -->
+                            <div class="filter-mobile-footer p-3 d-lg-none">
+                                <button type="button" class="btn btn-secondary w-100 fw-bold" data-bs-toggle="collapse" data-bs-target="#collapse-status">Valider</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-brand">
+                                Marque
+                                <div class="ms-auto fw-normal d-flex align-items-center">
+                                    (3)
+                                    <span class="d-none d-lg-inline ms-2"><span class="plus">+</span> <span class="less">-</span></span>
+                                    <span class="d-lg-none ms-2">&rarr;</span>
+                                </div>
+                            </button>
+                        </h2>
+                        
+                        <div id="collapse-brand" class="accordion-collapse collapse filter-mobile-takeover" data-bs-parent="#accordion-filters">
+                            <div class="filter-mobile-header p-4 pb-0 align-items-center d-lg-none">
+                                <!-- title & back only mobile -->
+                                <button type="button" class="btn btn-link text-dark text-decoration-none p-0 fw-semibold justify-content-start" data-bs-toggle="collapse" data-bs-target="#collapse-brand">
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.75293 11.1525C2.28418 11.6212 2.28418 12.3825 2.75293 12.8512L8.75293 18.8512C9.22168 19.32 9.98293 19.32 10.4517 18.8512C10.9204 18.3825 10.9204 17.6212 10.4517 17.1525L6.49918 13.2H20.4004C21.0642 13.2 21.6004 12.6637 21.6004 12C21.6004 11.3362 21.0642 10.8 20.4004 10.8H6.49918L10.4517 6.84749C10.9204 6.37874 10.9204 5.61749 10.4517 5.14874C9.98293 4.67999 9.22168 4.67999 8.75293 5.14874L2.75293 11.1487V11.1525Z" fill="currentColor"/>
+                                    </svg>
+                                    Marque
+                                </button>
+                            </div>
+
+                            <div class="filter-body-content">
+                                <input type="text" name="search-brand" class="form-control mb-4" placeholder="Rechercher une marque">
+                                
+                                <div class="filter-pills-group">
+                                    <input type="checkbox" class="btn-check" id="brand1" name="brands" value="Zarbeil" checked>
+                                    <label class="btn-pill" for="brand1">Zarbeil</label>
+
+                                    <input type="checkbox" class="btn-check" id="brand2" name="brands" value="OralB" checked>
+                                    <label class="btn-pill" for="brand2">Oral B</label>
+
+                                    <input type="checkbox" class="btn-check" id="brand3" name="brands" value="Mitosyl" checked>
+                                    <label class="btn-pill" for="brand3">Mitosyl</label>
+
+                                    <input type="checkbox" class="btn-check" id="brand4" name="brands" value="Etiaxil">
+                                    <label class="btn-pill" for="brand4">Etiaxil</label>
+                                    
+                                    <input type="checkbox" class="btn-check" id="brand5" name="brands" value="Lashile">
+                                    <label class="btn-pill" for="brand5">Lashilé</label>
+
+                                    <input type="checkbox" class="btn-check" id="brand6" name="brands" value="Gryndor">
+                                    <label class="btn-pill" for="brand6">Gryndor</label>
+                                </div>
+                            </div>
+
+                            <!-- Mobile only -->
+                            <div class="filter-mobile-footer p-3 d-lg-none">
+                                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="collapse" data-bs-target="#collapse-brand">Valider</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas-footer p-3 p-lg-4 bg-white mt-auto">
+                <div class="d-flex gap-2">
+                    <button type="reset" class="btn btn-outline-primary fw-bold flex-fill">Effacer</button>
+                    <button type="submit" class="btn btn-primary flex-fill">Afficher les résultats (2)</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
         <div class="container">
