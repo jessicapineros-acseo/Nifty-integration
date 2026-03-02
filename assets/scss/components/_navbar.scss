@@ -6,7 +6,10 @@
   --bs-navbar-toggler-icon-bg: url('../../assets/images/menu-burger-icon.svg');
   background-color: $white; 
   padding-top: 1.5rem;      
-  border-bottom: 1px solid $gray;
+  
+  @include media-breakpoint-up(lg) {
+      border-bottom: 1px solid $gray;
+  }
   
   .navbar-nav {
     --bs-nav-link-padding-x: 1rem;

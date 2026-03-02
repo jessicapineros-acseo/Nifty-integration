@@ -12946,6 +12946,10 @@ body {
   justify-content: center;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 .divider-dots {
   height: 6px;
   width: 100%;
@@ -13136,7 +13140,6 @@ h1,
 }
 
 .main-title {
-  font-size: 1.5rem;
   font-weight: 700;
   color: #381b58;
 }
@@ -13187,7 +13190,11 @@ h5,
   --bs-navbar-toggler-icon-bg: url('../../assets/images/menu-burger-icon.svg');
   background-color: white;
   padding-top: 1.5rem;
-  border-bottom: 1px solid #C7C7C7;
+}
+@media (min-width: 992px) {
+  .navbar {
+    border-bottom: 1px solid #C7C7C7;
+  }
 }
 .navbar .navbar-nav {
   --bs-nav-link-padding-x: 1rem;
