@@ -107,3 +107,11 @@ iframe {
     }
   }
 }
+
+.badge {
+  --bs-badge-font-size: 1em;
+  --bs-badge-font-weight: 400;
+  --bs-badge-padding-x: .3em;
+  --bs-badge-padding-y: .3em;
+  line-height: 1.5;
+}
