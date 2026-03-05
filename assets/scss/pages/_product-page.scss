@@ -79,10 +79,13 @@
 
   .accordion-button {
     box-shadow: none;
-    
     padding: 1.125rem .75rem;
     line-height: 1.5;
     border-radius: .375rem;
+
+    &:focus {
+        box-shadow: none;
+    }
   }
 
   .accordion-body {

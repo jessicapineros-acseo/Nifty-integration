@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les offres</title>
+    <title>Mentions Légales</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -143,128 +143,6 @@
             <p>Les cookies sont des fichiers textes déposés sur votre appareil (ordinateur, mobile, tablette) lors de la consultation d’un site internet. Ils enregistrent des informations relatives à votre navigation sur ce site. Les cookies ne peuvent être consultés ou modifiés que par leur émetteur. Pour plus d’informations, vous pouvez consulter<a href="http://highco-nifty.com/politique-de-confidentialite/" data-type="URL" data-id="http://highco-nifty.com/politique-de-confidentialite/"> </a><strong><a href="http://highco-nifty.com/politique-de-confidentialite/" data-type="URL" data-id="http://highco-nifty.com/politique-de-confidentialite/">la politique de confidentialité&nbsp;et de cookie</a>s </strong>.</p>
         </div>
     </main>
-
-    <!-- Panel filters  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
-
-        <div class="offcanvas-header mx-lg-auto pt-4 pb-1">
-            <h5 class="h4 offcanvas-title" id="offcanvasFiltersLabel">Filtrer</h5>
-            <button type="button" class="btn-close position-absolute end-0 me-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        
-        <form action="/search-offers" method="GET" class="d-flex flex-column flex-grow-1 overflow-hidden">
-            
-            <div class="offcanvas-body p-4 overflow-y-auto">
-                
-                <div class="accordion filter-accordion" id="accordion-filters">
-                    
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-status">
-                                Statut
-                                <div class="ms-auto fw-normal d-flex align-items-center">
-                                    (1)
-                                    <span class="d-none d-lg-inline ms-2"><span class="plus">+</span> <span class="less">-</span></span>
-                                    <span class="d-lg-none ms-2">&rarr;</span>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapse-status" class="accordion-collapse collapse filter-mobile-takeover" data-bs-parent="#accordion-filters">
-                            
-                            <div class="filter-mobile-header p-4 pb-0 align-items-center d-lg-none">
-                                <!-- title & back only mobile -->
-                                <button type="button" class="btn btn-link text-dark text-decoration-none p-0 fw-semibold justify-content-start" data-bs-toggle="collapse" data-bs-target="#collapse-status">
-                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.75293 11.1525C2.28418 11.6212 2.28418 12.3825 2.75293 12.8512L8.75293 18.8512C9.22168 19.32 9.98293 19.32 10.4517 18.8512C10.9204 18.3825 10.9204 17.6212 10.4517 17.1525L6.49918 13.2H20.4004C21.0642 13.2 21.6004 12.6637 21.6004 12C21.6004 11.3362 21.0642 10.8 20.4004 10.8H6.49918L10.4517 6.84749C10.9204 6.37874 10.9204 5.61749 10.4517 5.14874C9.98293 4.67999 9.22168 4.67999 8.75293 5.14874L2.75293 11.1487V11.1525Z" fill="currentColor"/>
-                                    </svg>
-                                    Statut
-                                </button>
-                            </div>
-
-                            <div class="filter-body-content">
-                                <div class="filter-pills-group">
-                                    <input type="checkbox" class="btn-check" id="status1" name="status" value="AVenir" checked>
-                                    <label class="btn-pill" for="status1">À venir</label>
-
-                                    <input type="checkbox" class="btn-check" id="status2" name="status" value="EnCours">
-                                    <label class="btn-pill" for="status2">En cours</label>
-
-                                    <input type="checkbox" class="btn-check" id="status3" name="status" value="Termine">
-                                    <label class="btn-pill" for="status3">Terminé</label>
-                                </div>
-                            </div>
-
-                            <!-- Mobile only -->
-                            <div class="filter-mobile-footer p-3 d-lg-none">
-                                <button type="button" class="btn btn-secondary w-100 fw-bold" data-bs-toggle="collapse" data-bs-target="#collapse-status">Valider</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-brand">
-                                Marque
-                                <div class="ms-auto fw-normal d-flex align-items-center">
-                                    (3)
-                                    <span class="d-none d-lg-inline ms-2"><span class="plus">+</span> <span class="less">-</span></span>
-                                    <span class="d-lg-none ms-2">&rarr;</span>
-                                </div>
-                            </button>
-                        </h2>
-                        
-                        <div id="collapse-brand" class="accordion-collapse collapse filter-mobile-takeover" data-bs-parent="#accordion-filters">
-                            <div class="filter-mobile-header p-4 pb-0 align-items-center d-lg-none">
-                                <!-- title & back only mobile -->
-                                <button type="button" class="btn btn-link text-dark text-decoration-none p-0 fw-semibold justify-content-start" data-bs-toggle="collapse" data-bs-target="#collapse-brand">
-                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.75293 11.1525C2.28418 11.6212 2.28418 12.3825 2.75293 12.8512L8.75293 18.8512C9.22168 19.32 9.98293 19.32 10.4517 18.8512C10.9204 18.3825 10.9204 17.6212 10.4517 17.1525L6.49918 13.2H20.4004C21.0642 13.2 21.6004 12.6637 21.6004 12C21.6004 11.3362 21.0642 10.8 20.4004 10.8H6.49918L10.4517 6.84749C10.9204 6.37874 10.9204 5.61749 10.4517 5.14874C9.98293 4.67999 9.22168 4.67999 8.75293 5.14874L2.75293 11.1487V11.1525Z" fill="currentColor"/>
-                                    </svg>
-                                    Marque
-                                </button>
-                            </div>
-
-                            <div class="filter-body-content">
-                                <input type="text" name="search-brand" class="form-control mb-4" placeholder="Rechercher une marque">
-                                
-                                <div class="filter-pills-group">
-                                    <input type="checkbox" class="btn-check" id="brand1" name="brands" value="Zarbeil" checked>
-                                    <label class="btn-pill" for="brand1">Zarbeil</label>
-
-                                    <input type="checkbox" class="btn-check" id="brand2" name="brands" value="OralB" checked>
-                                    <label class="btn-pill" for="brand2">Oral B</label>
-
-                                    <input type="checkbox" class="btn-check" id="brand3" name="brands" value="Mitosyl" checked>
-                                    <label class="btn-pill" for="brand3">Mitosyl</label>
-
-                                    <input type="checkbox" class="btn-check" id="brand4" name="brands" value="Etiaxil">
-                                    <label class="btn-pill" for="brand4">Etiaxil</label>
-                                    
-                                    <input type="checkbox" class="btn-check" id="brand5" name="brands" value="Lashile">
-                                    <label class="btn-pill" for="brand5">Lashilé</label>
-
-                                    <input type="checkbox" class="btn-check" id="brand6" name="brands" value="Gryndor">
-                                    <label class="btn-pill" for="brand6">Gryndor</label>
-                                </div>
-                            </div>
-
-                            <!-- Mobile only -->
-                            <div class="filter-mobile-footer p-3 d-lg-none">
-                                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="collapse" data-bs-target="#collapse-brand">Valider</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="offcanvas-footer p-3 p-lg-4 bg-white mt-auto">
-                <div class="d-flex gap-2">
-                    <button type="reset" class="btn btn-outline-primary fw-bold flex-fill">Effacer</button>
-                    <button type="submit" class="btn btn-primary flex-fill">Afficher les résultats (2)</button>
-                </div>
-            </div>
-        </form>
-    </div>
 
     <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
         <div class="container">
