@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <a class="navbar-brand me-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Nifty">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Open menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+                        
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="mainMenuLabel">
+                                <img src="assets/images/logo.svg" alt="Nifty" height="30">
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body gap-2 gap-lg-2 gap-xl-4">
+                            <ul class="navbar-nav mb-4 mb-lg-0 gap-3 ">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="offers.html">Les offres</a>
+                                </li>
+                                <!-- à décommenter lors de la dynamisation -->
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="register.html">Inscription</a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="documentation.html">Documentation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">Actualités</a>
+                                </li>
+                            </ul>
+
+                            <!-- Add condition -->
+                            <!-- à décommenter lors de la dynamisation -->
+                            <!-- <div class="d-flex">
+                                <a href="connexion.html" class="btn btn-outline-primary">Se connecter</a>
+                            </div> -->
+
+                            <div class="dropdown d-flex mt-4 mt-lg-0">
+                                <button class="btn btn-outline-primary btn-account" type="button" id="menuMonCompte" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Mon compte
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.1525 16.4475C11.6212 16.9163 12.3825 16.9163 12.8512 16.4475L18.8512 10.4475C19.32 9.97878 19.32 9.21753 18.8512 8.74878C18.3825 8.28003 17.6212 8.28003 17.1525 8.74878L12 13.9013L6.84749 8.75253C6.37874 8.28378 5.61749 8.28378 5.14874 8.75253C4.67999 9.22128 4.67999 9.98253 5.14874 10.4513L11.1487 16.4513L11.1525 16.4475Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                                
+                                <ul class="dropdown-menu dropdown-menu-center shadow-sm mt-3" aria-labelledby="menuMonCompte">
+                                    <li>
+                                        <a class="dropdown-item py-2" href="account.html">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.24998 4.20002C5.24998 3.23315 6.0331 2.45002 6.99998 2.45002C7.96685 2.45002 8.74997 3.23315 8.74997 4.20002C8.74997 5.1669 7.96685 5.95002 6.99998 5.95002C6.0331 5.95002 5.24998 5.1669 5.24998 4.20002ZM9.79997 4.20002C9.79997 2.65346 8.54654 1.40002 6.99998 1.40002C5.45341 1.40002 4.19998 2.65346 4.19998 4.20002C4.19998 5.74659 5.45341 7.00002 6.99998 7.00002C8.54654 7.00002 9.79997 5.74659 9.79997 4.20002ZM3.14998 11.9C3.14998 10.3535 4.40341 9.10003 5.94998 9.10003H8.04997C9.59654 9.10003 10.85 10.3535 10.85 11.9V12.075C10.85 12.366 11.084 12.6 11.375 12.6C11.6659 12.6 11.9 12.366 11.9 12.075V11.9C11.9 9.77378 10.1762 8.05002 8.04997 8.05002H5.94998C3.82373 8.05002 2.09998 9.77378 2.09998 11.9V12.075C2.09998 12.366 2.33404 12.6 2.62498 12.6C2.91591 12.6 3.14998 12.366 3.14998 12.075V11.9Z" fill="currentColor"/>
+                                            </svg>
+                                            Mes informations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-2" href="receipts.html">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.70345 5.6001C4.30501 3.57666 6.1797 2.1001 8.40001 2.1001H9.80001C10.1872 2.1001 10.5 2.41291 10.5 2.8001C10.5 3.18729 10.1872 3.5001 9.80001 3.5001H8.40001C6.96501 3.5001 5.73126 4.36416 5.19095 5.6001H8.05001C8.34095 5.6001 8.57501 5.83416 8.57501 6.1251C8.57501 6.41603 8.34095 6.6501 8.05001 6.6501H4.91751C4.90657 6.76603 4.90001 6.88197 4.90001 7.0001C4.90001 7.11822 4.90657 7.23416 4.91751 7.3501H8.05001C8.34095 7.3501 8.57501 7.58416 8.57501 7.8751C8.57501 8.16603 8.34095 8.4001 8.05001 8.4001H5.19095C5.73126 9.63603 6.96501 10.5001 8.40001 10.5001H9.80001C10.1872 10.5001 10.5 10.8129 10.5 11.2001C10.5 11.5873 10.1872 11.9001 9.80001 11.9001H8.40001C6.1797 11.9001 4.30501 10.4235 3.70345 8.4001H2.97501C2.68407 8.4001 2.45001 8.16603 2.45001 7.8751C2.45001 7.58416 2.68407 7.3501 2.97501 7.3501H3.51314C3.49782 7.12041 3.49782 6.87978 3.51314 6.6501H2.97501C2.68407 6.6501 2.45001 6.41603 2.45001 6.1251C2.45001 5.83416 2.68407 5.6001 2.97501 5.6001H3.70345Z" fill="currentColor"/>
+                                            </svg>
+                                            Mes bordereaux
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item py-2" href="#">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.6944 3.99427C11.9678 3.72083 11.9678 3.27677 11.6944 3.00333L10.2944 1.60333C10.0932 1.40208 9.79346 1.34302 9.53096 1.45239C9.26846 1.56177 9.10003 1.81771 9.10003 2.09989V2.79989H5.60002C3.28127 2.79989 1.40002 4.68114 1.40002 6.9999C1.40002 7.38708 1.71284 7.69989 2.10002 7.69989C2.48721 7.69989 2.80002 7.38708 2.80002 6.9999C2.80002 5.45333 4.05346 4.19989 5.60002 4.19989H9.10003V4.89989C9.10003 5.18208 9.27065 5.43802 9.53315 5.54739C9.79565 5.65677 10.0953 5.59552 10.2966 5.39646L11.6966 3.99646L11.6944 3.99427ZM2.30565 10.0055C2.03221 10.279 2.03221 10.723 2.30565 10.9965L3.70565 12.3965C3.9069 12.5977 4.20659 12.6568 4.46909 12.5474C4.73159 12.438 4.90002 12.1821 4.90002 11.8999V11.1999H8.40002C10.7188 11.1999 12.6 9.31865 12.6 6.9999C12.6 6.61271 12.2872 6.29989 11.9 6.29989C11.5128 6.29989 11.2 6.61271 11.2 6.9999C11.2 8.54646 9.94659 9.7999 8.40002 9.7999H4.90002V9.0999C4.90002 8.81771 4.7294 8.56177 4.4669 8.45239C4.2044 8.34302 3.90471 8.40427 3.70346 8.60333L2.30346 10.0033L2.30565 10.0055Z" fill="currentColor"/>
+                                            </svg>
+                                            Changer de pharmacie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-2 item-sign-out" href="#">
+                                            <svg aria-hidden="true" width="14" height="14" class="me-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.90002 3.5001C5.28721 3.5001 5.60002 3.18729 5.60002 2.8001C5.60002 2.41291 5.28721 2.1001 4.90002 2.1001H3.50002C2.34065 2.1001 1.40002 3.04072 1.40002 4.2001V9.8001C1.40002 10.9595 2.34065 11.9001 3.50002 11.9001H4.90002C5.28721 11.9001 5.60002 11.5873 5.60002 11.2001C5.60002 10.8129 5.28721 10.5001 4.90002 10.5001H3.50002C3.11284 10.5001 2.80002 10.1873 2.80002 9.8001V4.2001C2.80002 3.81291 3.11284 3.5001 3.50002 3.5001H4.90002ZM12.3944 7.49447C12.6678 7.22104 12.6678 6.77697 12.3944 6.50353L9.5944 3.70354C9.32096 3.4301 8.8769 3.4301 8.60346 3.70354C8.33002 3.97697 8.33002 4.42104 8.60346 4.69447L10.2091 6.3001H5.60002C5.21284 6.3001 4.90002 6.61291 4.90002 7.0001C4.90002 7.38728 5.21284 7.7001 5.60002 7.7001H10.2091L8.60346 9.30572C8.33002 9.57916 8.33002 10.0232 8.60346 10.2967C8.8769 10.5701 9.32096 10.5701 9.5944 10.2967L12.3944 7.49666V7.49447Z" fill="currentColor"/>
+                                            </svg>
+                                            Déconnexion
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-4 py-lg-5">
+        <div class="container">
+            
+            <h1 class="main-title mb-4">
+                Nos équipes vous <span class="text-primary">accompagnent</span>
+            </h1>
+
+            <div class="text-center">
+                <h2 class="mb-4">
+                    Pharmaciens, vous avez des questions ?
+                </h2>
+
+                <p>Référencement, utilisation, problèmes techniques, remboursements... Une Hotline vous est dédiée pour vous accompagner.</p>
+                
+                <div class="bg-light p-4 mb-5 rounded-2">
+                    <p class="h4 text-primary">Hotline</p>
+                    <p>Du lundi au vendredi de 9h à 12h et de 14h à 17h (16h30 le vendredi et hors jours fériés)
+                    <p>au <span class="fw-bold">04 88 71 36 0</span> 0 ou au <span class="fw-bold">01 70 91 00 80</span></p>
+                    <p>ou par email à <a href="mailto:distribution@highco-data.fr" class="fw-bold text-dark text-decoration-none">distribution@highco-data.fr</a></p>
+                    <p>Nous sommes déjà en communication ?</p>
+                    <p>Envoyez-nous un email, nous vous répondons sous 48h.</p>
+
+                </div>
+            </div>
+            <h2 class="main-title mb-4">
+                Question ? Conseil ? Commande de PLV ? <span class="text-primary">C’est par ici</span>
+            </h2>
+
+            <div class="row mb-5 g-4">
+                <div class="col-md-6 pe-lg-5">
+                    <h2 class="h4 mb-3">
+                        <span class="fw-bold">Pharmacies,</span> 
+                        <span class="text-primary">une équipe dédiée pour vous aider</span>
+                    </h2>
+                    <p>
+                        Commande de supports PLV, référencement, utilisation, problèmes techniques, remboursements... Nous répondons à vos questions.
+                    </p>
+                </div>
+                
+                <div class="col-md-6 pe-lg-5">
+                    <h2 class="h4 mb-3">
+                        <span class="fw-bold">Laboratoires,</span> 
+                        <span class="text-primary">une approche sur-mesure</span>
+                    </h2>
+                    <p>
+                        Facilitez l'activation de vos offres et maximisez le sell-out directement en pharmacie. Innovations ? Déstockage ? Temps forts de marque ?... Bénéficiez de nos conseils.
+                    </p>
+                </div>
+            </div>
+
+            <form action="" method="POST">
+                
+                <div class="row g-4 mb-4">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactName" class="form-label fw-bold">Nom / Prénom <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="contactName" name="FullName" required>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactType" class="form-label fw-bold">Vous êtes <span class="text-danger">*</span></label>
+                        <select class="form-select" id="contactType" name="UserType" required>
+                            <option value="Pharmacie" selected>Pharmacie</option>
+                            <option value="Laboratoire">Laboratoire</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactCompany" class="form-label fw-bold">Nom du laboratoire / pharmacie <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="contactCompany" name="CompanyName" required>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactEmail" class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="contactEmail" name="Email" required>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactPhone" class="form-label fw-bold">Téléphone</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="contactPhone" name="Phone">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <label for="contactCIP" class="form-label fw-bold">Code CIP</label>
+                        <input type="text" class="form-control" id="contactCIP" name="CIPCode">
+                    </div>
+
+                    <div class="col-12 mt-4">
+                        <label for="contactMessage" class="form-label fw-bold">Message</label>
+                        <textarea class="form-control" id="contactMessage" name="Message" rows="6"></textarea>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <p class="fw-bold mb-2">Politique de confidentialité <span class="text-danger">*</span></p>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="privacyConsent" name="PrivacyConsent" required>
+                        <label class="form-check-label text-dark" for="privacyConsent">
+                            J'ai lu et j'accepte que les informations communiquées soit utilisées conformément à la politique de confidentialité
+                        </label>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Valider</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer pt-5 pt-lg-4 pb-3 pb-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-lg-0">
+                    <a class="navbar-brand d-inline-block mb-3" href="index.html">
+                       <img src="assets/images/logo-white.svg" alt="Nifty">
+                    </a>
+                    <p class="footer-text pe-lg-4">
+                        HighCo Nifty, LA solution de coupons de <br> réduction immédiats sur smartphone.
+                    </p>
+                    <div class="d-flex align-items-center gap-2 mb-4">
+                        <a href="https://www.youtube.com/channel/UCBkoWd0bbpiLP5Ni1ifl2Gw" aria-label="Youtube" target="_blank">
+                            <svg aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43.6274 14.1075C43.1624 12.33 41.7674 10.935 40.0049 10.4625C36.8174 9.59998 24.0074 9.59998 24.0074 9.59998C24.0074 9.59998 11.1974 9.59998 8.0024 10.4625C6.2399 10.935 4.8524 12.33 4.3799 14.1075C3.5249 17.325 3.5249 24.03 3.5249 24.03C3.5249 24.03 3.5249 30.735 4.3799 33.9525C4.8524 35.7225 6.2399 37.065 8.0024 37.5375C11.1974 38.4 24.0074 38.4 24.0074 38.4C24.0074 38.4 36.8174 38.4 40.0124 37.5375C41.7749 37.065 43.1624 35.7225 43.6349 33.9525C44.4899 30.735 44.4899 24.03 44.4899 24.03C44.4899 24.03 44.4899 17.325 43.6349 14.1075H43.6274ZM19.8149 30.12V17.94L30.5174 24.03L19.8149 30.12Z" fill="#fff"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/highco-nifty/" aria-label="Linkedin" target="_blank">
+                            <svg aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38.4002 7.20001H9.5927C8.2727 7.20001 7.2002 8.28751 7.2002 9.62251V38.3775C7.2002 39.7125 8.2727 40.8 9.5927 40.8H38.4002C39.7202 40.8 40.8002 39.7125 40.8002 38.3775V9.62251C40.8002 8.28751 39.7202 7.20001 38.4002 7.20001ZM17.3552 36H12.3752V19.965H17.3627V36H17.3552ZM14.8652 12C16.4627 12 17.7527 13.29 17.7527 14.8875C17.7527 16.485 16.4627 17.775 14.8652 17.775C13.2677 17.775 11.9777 16.485 11.9777 14.8875C11.9777 13.29 13.2677 12 14.8652 12ZM36.0227 36H31.0427V28.2C31.0427 26.34 31.0052 23.9475 28.4552 23.9475C25.8602 23.9475 25.4627 25.9725 25.4627 28.065V36H20.4827V19.965H25.2602V22.155H25.3277C25.9952 20.895 27.6227 19.5675 30.0452 19.5675C35.0852 19.5675 36.0227 22.89 36.0227 27.21V36Z" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-2 mb-lg-0">
+                    <h5 class="footer-title">Pourquoi Nifty ?</h5>
+                    <ul class="footer-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="register.html">Inscription</a></li>
+                    <li><a href="offers.html">Nos offres</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="news.html">Actualités</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-2 mb-lg-0">
+                    <h5 class="footer-title">Liens annexes</h5>
+                    <ul class="footer-list">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contac-page.html">Contacts</a></li>
+                        <li><a href="legal-notices.html">Mentions légales</a></li>
+                        <li><a href="privacy-policy.html">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Nous contacter</h5>
+                    <div class="footer-text fw-semibold">
+                        <p>365 avenue Archimède <br>13799 Aix en Provence Cedex 3</p>
+                        <p><a href="mailto:contact@highco-nifty.com" class="text-white">contact@highco-nifty.com</a></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
