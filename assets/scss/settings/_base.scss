@@ -3,6 +3,10 @@ body {
   letter-spacing: .02em;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .icon {
   width: .875rem;
   height: .875rem;
@@ -53,6 +57,9 @@ iframe {
 
 .text-16 {
   font-size: 1rem;
+}
+.text-18 {
+  font-size: 1.125rem;
 }
 
 .gap-2-5 {
