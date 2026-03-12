@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 0,
-        watchOverflow: true, 
-        
+        watchOverflow: true,
         navigation: {
             nextEl: '.custom-hero-next',
             prevEl: '.custom-hero-prev',
