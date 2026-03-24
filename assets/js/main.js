@@ -14,124 +14,151 @@ document.addEventListener("DOMContentLoaded", function () {
     * Sliders 
     * =======================================================================
     */
+   
+    if (typeof Swiper !== 'undefined') {
 
-    // Slider Hero 
-    const swiperHero = new Swiper('.slider-hero', {
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        watchOverflow: true,
-        navigation: {
-            nextEl: '.custom-hero-next',
-            prevEl: '.custom-hero-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-
-    // Slider costumers homepage
-    const wrapperSliderCostumers = document.querySelector('.slider-costumers .swiper-wrapper');
-    
-    if (wrapperSliderCostumers) {
-        const slides = wrapperSliderCostumers.querySelectorAll('.swiper-slide');
-        // Automatically clones slides if there are too few (<12) to ensure Swiper's infinite loop works with centeredSlides
-        if (slides.length > 0 && slides.length < 12) {
-            for (let i = 0; i < 2; i++) {
-                slides.forEach(slide => {
-                    const clone = slide.cloneNode(true);
-                    wrapperSliderCostumers.appendChild(clone);
-                });
-            }
-        }
-    }
-
-    const sliderCostumers = new Swiper('.slider-costumers', {
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1.5,
-                spaceBetween: 16,
-            },
-            768: {
-                slidesPerView: 3.5,
-                spaceBetween: 20,
-            },
-            992: {
-                slidesPerView: 5.5,
-                spaceBetween: 24,
-            }
-        }
-    });
-
-
-    // Slider promos
-    const wrapperSliderPromos = document.querySelector('.swiper-promo .swiper-wrapper');
- 
-    let shouldLoop = true;
-
-    if (wrapperSliderPromos) {
-        const slides = wrapperSliderPromos.querySelectorAll('.swiper-slide');
-        
-        if (slides.length <= 4) {
-            shouldLoop = false;
-        }
-        else if (slides.length > 0 && slides.length < 10) {
-            slides.forEach(slide => {
-                const clone = slide.cloneNode(true);
-                wrapperSliderPromos.appendChild(clone);
+        // Slider Hero 
+        if (document.querySelector('.slider-hero')) {
+            const swiperHero = new Swiper('.slider-hero', {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                watchOverflow: true,
+                navigation: {
+                    nextEl: '.custom-hero-next',
+                    prevEl: '.custom-hero-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
         }
-    }
-    const swiperPromo = new Swiper('.swiper-promo', {
-        loop: shouldLoop,
-        loopAdditionalSlides: 4, 
-        watchSlidesProgress: true,
-        navigation: {
-            nextEl: '.custom-next-promo',
-            prevEl: '.custom-prev-promo',
-        },
+
+        // Slider costumers homepage
+        const wrapperSliderCostumers = document.querySelector('.slider-costumers .swiper-wrapper');
         
-        breakpoints: {
-            0: {
-                slidesPerView: 1.2,
-                spaceBetween: 16,
-                centeredSlides: true,
-            },
-            576: {
-                slidesPerView: 2.2,
-                spaceBetween: 20,
-                centeredSlides: false,
-            },
-            1024: {
-                slidesPerView: 3.2,
-                spaceBetween: 20,
-                centeredSlides: false,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 24,
-                centeredSlides: false,
-            }
-        },
-        on: {
-            init: function () {
-                if (this.params.loop) {
-                    const swiper = this;
-                    setTimeout(() => {
-                        swiper.slidePrev(0);
-                        setTimeout(() => {
-                            swiper.slideNext(0);
-                        }, 10);
-                    }, 50);
+        if (wrapperSliderCostumers) {
+            const slides = wrapperSliderCostumers.querySelectorAll('.swiper-slide');
+            // Automatically clones slides if there are too few (<12) to ensure Swiper's infinite loop works with centeredSlides
+            if (slides.length > 0 && slides.length < 12) {
+                for (let i = 0; i < 2; i++) {
+                    slides.forEach(slide => {
+                        const clone = slide.cloneNode(true);
+                        wrapperSliderCostumers.appendChild(clone);
+                    });
                 }
             }
+
+            const sliderCostumers = new Swiper('.slider-costumers', {
+                loop: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                    },
+                    992: {
+                        slidesPerView: 5.5,
+                        spaceBetween: 24,
+                    }
+                }
+            });
         }
-    });
+
+        // Slider promos
+        const wrapperSliderPromos = document.querySelector('.swiper-promo .swiper-wrapper');
+    
+        if (wrapperSliderPromos) {
+            let shouldLoop = true;
+            const slides = wrapperSliderPromos.querySelectorAll('.swiper-slide');
+            
+            if (slides.length <= 4) {
+                shouldLoop = false;
+            }
+            else if (slides.length > 0 && slides.length < 10) {
+                slides.forEach(slide => {
+                    const clone = slide.cloneNode(true);
+                    wrapperSliderPromos.appendChild(clone);
+                });
+            }
+
+            const swiperPromo = new Swiper('.swiper-promo', {
+                loop: shouldLoop,
+                loopAdditionalSlides: 4, 
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: '.custom-next-promo',
+                    prevEl: '.custom-prev-promo',
+                },
+                
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 16,
+                        centeredSlides: true,
+                    },
+                    576: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 20,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 20,
+                        centeredSlides: false,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 24,
+                        centeredSlides: false,
+                    }
+                },
+                on: {
+                    init: function () {
+                        if (this.params.loop) {
+                            const swiper = this;
+                            setTimeout(() => {
+                                swiper.slidePrev(0);
+                                setTimeout(() => {
+                                    swiper.slideNext(0);
+                                }, 10);
+                            }, 50);
+                        }
+                    }
+                }
+            });
+        }
+
+    }
+
+    /**
+    * =======================================================================
+    * Document Upload 
+    * =======================================================================
+    */
+
+    const fileInput = document.getElementById('documentUpload');
+    const fileNameDisplay = document.querySelector('label[for="documentUpload"] .file-name');
+    
+    if (fileInput && fileNameDisplay) {
+        const originalText = fileNameDisplay.textContent;
+
+        fileInput.addEventListener('change', function (event) {
+            
+            if (event.target.files && event.target.files.length > 0) {
+                fileNameDisplay.textContent = event.target.files[0].name;
+            } else {
+                fileNameDisplay.textContent = originalText;
+            }
+        });
+    }
 });

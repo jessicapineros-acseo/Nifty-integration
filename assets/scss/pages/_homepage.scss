@@ -178,3 +178,15 @@ body:has(.hero-section) {
         height: auto; 
     }
 }
+
+.newsletter-section {
+
+    .cta-box {
+        max-width: 706px;
+
+        .input-group {
+            max-width: 390px;
+            margin: auto;
+        }
+    }
+}
